@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  txfp:
+    image: txfp:1.0.0
+    build:
+      context: ./tx-file-processing-api
+    container_name: tx-file-processing-api
+    ports:
+      - "8081:8081"
+  txfu:
+    image: txfu:1.0.0
+    build:
+      context: ./tx-file-upload-api
+    container_name: tx-file-upload-api
+    ports:
+      - "8082:8082"
